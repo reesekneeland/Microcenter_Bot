@@ -1,0 +1,1 @@
+screen -S MCBot -d -m /usr/bin/python3 /home/reese/personal_projects/microcenter_bot/microcenter_waitlist_bot_v3standalone.py $1 $2 $3 $4 $5
