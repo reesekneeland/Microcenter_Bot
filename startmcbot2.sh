@@ -1,1 +1,0 @@
-screen -S MCBot2 -d -m /usr/bin/python3 /home/reese/personal_projects/microcenter_bot/microcenter_prewaitlist_bot.py $1 $2 $3 $4 $5
