@@ -42,20 +42,7 @@ async def on_message(msg):
             print(firstName, lastName, phoneNumber, discChannel, discAuthor)
             await msg.delete()
             await msg.channel.send("Adding " + firstName + " " + lastName + " to the waitlist!")
-            os.system('/home/reese/personal_projects/microcenter_bot/startmcbot.sh {} {} {} {} {}' .format(str(firstName), str(lastName), str(phoneNumber), str(discChannel), str(discAuthor))) 
-        
-        if '.joinprewl' in msg.content.lower():
-            text = msg.content
-            args = text.split(' ')
-            firstName = args[1]
-            lastName = args[2]
-            phoneNumber = args[3]
-            discChannel = msg.channel.id
-            discAuthor = msg.author.id
-            print(firstName, lastName, phoneNumber, discChannel, discAuthor)
-            await msg.delete()
-            await msg.channel.send("Adding " + firstName + " " + lastName + " to the pre-waitlist!")
-            os.system('/home/reese/personal_projects/microcenter_bot/startmcbot2.sh {} {} {} {} {}' .format(str(firstName), str(lastName), str(phoneNumber), str(discChannel), str(discAuthor))) 
+            os.system('/home/reese/microcenter_bot/startmcbot.sh {} {} {} {} {}' .format(str(firstName), str(lastName), str(phoneNumber), str(discChannel), str(discAuthor))) 
     except:
         await msg.channel.send("An error occured! This person has not been added to the waitlist! Please try again and make sure you are using the input command correctly")
 TOKEN = os.getenv('DISCORD_TOKEN')
